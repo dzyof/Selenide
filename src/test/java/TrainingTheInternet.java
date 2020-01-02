@@ -27,6 +27,7 @@ public class TrainingTheInternet extends BaseClass{
         // Також може викликатися з параметрами
         //checkbox.checkStateAll(false);
         //checkbox.checkStateAll(true);
+        //checkbox.checkStateAll(true);
     }
 
 }
