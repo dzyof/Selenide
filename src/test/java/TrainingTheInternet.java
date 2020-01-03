@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Selenide;
 import org.junit.Test;
 import widget.Checkbox;
+import widget.Download;
 import widget.Dropdown;
 import widget.Element;
 
@@ -41,6 +42,14 @@ public class TrainingTheInternet extends BaseClass{
         //Можливий вибір по значеню і тексту
         dropdown.selectVal("1");
     //    dropdown.selectText("Option 2");
+    }
+
+    @Test
+    public  void  createTestDownload(){
+        Download download  =  new Download();
+        this.open("/download");
+
+        download.file();
     }
 
 }
