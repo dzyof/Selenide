@@ -13,7 +13,9 @@ public class Checkbox {
     public void checkIn() {
     //   $("#checkboxes input").shouldHave(text("checkbox 1")).parent().click();
        //$("#checkboxes input").shouldHave(type("checkbox")).click();
-       $$("#checkboxes input").first().click();
+        collection.first().click();
+
+
        // Selenide.sleep(3000);
     }
 

@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Selenide;
 import org.junit.Test;
 import widget.Checkbox;
+import widget.Dropdown;
 import widget.Element;
 
 
@@ -28,6 +29,18 @@ public class TrainingTheInternet extends BaseClass{
         //checkbox.checkStateAll(false);
         //checkbox.checkStateAll(true);
         //checkbox.checkStateAll(true);
+    }
+
+    @Test
+    public  void  createTestDropdown(){
+        Dropdown dropdown  =  new  Dropdown();
+        this.open("/dropdown");
+
+        dropdown.haveOption();
+
+        //Можливий вибір по значеню і тексту
+        dropdown.selectVal("1");
+    //    dropdown.selectText("Option 2");
     }
 
 }
