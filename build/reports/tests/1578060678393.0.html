@@ -28,34 +28,16 @@
     <div class="row">
       <a href="https://github.com/tourdedave/the-internet"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
       <div id="content" class="large-12 columns">
-        <h3>Add/Remove Elements</h3>
-<br>
-<div class="example">
-  <button onclick="addElement()">Add Element</button>
-  <hr>
-  <div id="elements">
-    
-      
-    
-  <button class="added-manually" onclick="deleteElement()">Delete</button></div>
+        <div class="example">
+  <h3>File Downloader</h3>
+  
+    <a href="download/ObjectivityTestAutomationCSHarpFramework.txt">ObjectivityTestAutomationCSHarpFramework.txt</a>
+    <br>
+  
+    <a href="download/some-file.txt">some-file.txt</a>
+    <br>
+  
 </div>
-
-<script>
-  function addElement() {
-    $("<button class='added-manually' onclick='deleteElement()'>Delete</button>").appendTo('#elements');
-  }
-  function deleteElement() {
-    $('#elements button:first-child').remove();
-  }
-</script>
-<style>
-button.added-manually {
-  margin-right: 0.285em;
-}
-button {
-  margin-bottom: 10px;
-}
-</style>
 
       </div>
     </div>

@@ -2,6 +2,7 @@ import com.codeborne.selenide.Selenide;
 import org.junit.Test;
 import widget.*;
 
+import java.io.FileNotFoundException;
 import java.util.stream.Stream;
 
 
@@ -44,7 +45,7 @@ public class TrainingTheInternet extends BaseClass{
     }
 
     @Test
-    public  void  createTestDownload(){
+    public  void  createTestDownload() throws FileNotFoundException {
         Download download  =  new Download();
         this.open("/download");
 
@@ -55,10 +56,7 @@ public class TrainingTheInternet extends BaseClass{
     public void  createTestUpload(){
         Upload upload = new Upload();
         this.open("/upload");
-
         upload.uploadByName("build/reports/tests/1578051068131.0.png");
-
-        Selenide.sleep(3000);
     }
 
 }
