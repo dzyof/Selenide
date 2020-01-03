@@ -1,9 +1,8 @@
 import com.codeborne.selenide.Selenide;
 import org.junit.Test;
-import widget.Checkbox;
-import widget.Download;
-import widget.Dropdown;
-import widget.Element;
+import widget.*;
+
+import java.util.stream.Stream;
 
 
 public class TrainingTheInternet extends BaseClass{
@@ -50,6 +49,16 @@ public class TrainingTheInternet extends BaseClass{
         this.open("/download");
 
         download.file();
+    }
+
+    @Test
+    public void  createTestUpload(){
+        Upload upload = new Upload();
+        this.open("/upload");
+
+        upload.uploadByName("build/reports/tests/1578051068131.0.png");
+
+        Selenide.sleep(3000);
     }
 
 }

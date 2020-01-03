@@ -11,9 +11,8 @@ public class Download {
 
     public void file() {
         //Через клік.
-         $$(".example a").filterBy(Condition.text("text.txt")).first().click();
+        $$(".example a").filterBy(Condition.text("text.txt")).first().click();
         // Через давнлоад
-     //   $(".example a").shouldHave(Condition.text("Test-data-samples-2.jpg")).download();
-
+        //$(".example a").shouldHave(Condition.text("Test-data-samples-2.jpg")).download();
     }
 }
