@@ -100,11 +100,14 @@ public class TrainingTheInternet extends BaseClass{
         hover.noEfect();
     }
     @Test
-    public void createTestJQMenu(){
+    public void createTestJQMenu() throws FileNotFoundException{
         JQMenu menu = new JQMenu();
-        this.open("/jqueryui/menu");
 
+        this.open("/jqueryui/menu");
         menu.backHome();
+
+        this.open("/jqueryui/menu");
+        menu.downloadExcel();
     }
 
 }
