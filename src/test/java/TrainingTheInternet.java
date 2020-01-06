@@ -98,6 +98,5 @@ public class TrainingTheInternet extends BaseClass{
         hover.in();
         hover.inAllElements();
         hover.noEfect();
-
     }
 }

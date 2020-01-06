@@ -32,7 +32,10 @@ public class ItemHover {
     }
 
     public void noEfect() {
+        //first load - no efect
+        $(".figcaption").shouldBe(hidden);
 
+        //no efect after action hover
         this.inAllElements();
         $("h3").hover().find(By.className("figcaption")).shouldBe(hidden);
 
