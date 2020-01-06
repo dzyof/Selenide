@@ -1,14 +1,23 @@
 import com.codeborne.selenide.Selenide;
 
 
+import org.junit.Before;
 import org.junit.Test;
 import widget.*;
 
 import java.io.FileNotFoundException;
 import java.util.stream.Stream;
 
+import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
+
 
 public class TrainingTheInternet extends BaseClass{
+
+    @Before
+    public void clearCache() {
+        clearBrowserCache();
+    }
+
     @Test
     public void createTestTheAddDel(){
 
