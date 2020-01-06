@@ -99,4 +99,12 @@ public class TrainingTheInternet extends BaseClass{
         hover.inAllElements();
         hover.noEfect();
     }
+    @Test
+    public void createTestJQMenu(){
+        JQMenu menu = new JQMenu();
+        this.open("/jqueryui/menu");
+
+        menu.backHome();
+    }
+
 }
