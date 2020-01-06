@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Selenide;
 
 
+import com.codeborne.selenide.commands.Hover;
 import org.junit.Before;
 import org.junit.Test;
 import widget.*;
@@ -86,13 +87,17 @@ public class TrainingTheInternet extends BaseClass{
         this.open("/login");
 
         page.login(loginn, password);
-        Selenide.sleep(2000);
-
         page.logout(loginn ,  password);
-        Selenide.sleep(2000);
-
     }
 
+    @Test
+    public void createTestHover(){
+        ItemHover hover = new ItemHover();
+        this.open("/hovers");
 
+        hover.in();
+        hover.inAllElements();
+        hover.noEfect();
 
+    }
 }
