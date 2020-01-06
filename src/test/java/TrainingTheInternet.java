@@ -1,4 +1,6 @@
 import com.codeborne.selenide.Selenide;
+
+
 import org.junit.Test;
 import widget.*;
 
@@ -58,5 +60,30 @@ public class TrainingTheInternet extends BaseClass{
         this.open("/upload");
         upload.uploadByName("build/reports/tests/1578051068131.0.png");
     }
+
+    //@Test
+    public  void  createTestsSlider(){
+
+        Sliders slider = new Sliders();
+        this.open("/horizontal_slider");
+        slider.maxValue();
+        Selenide.sleep(3000);
+
+    }
+
+    @Test
+    public  void  createTestLogin(){
+        LoginPage page = new LoginPage();
+        this.open("/login");
+
+        page.login(loginn, password);
+        Selenide.sleep(2000);
+
+        page.logout(loginn ,  password);
+        Selenide.sleep(2000);
+
+    }
+
+
 
 }

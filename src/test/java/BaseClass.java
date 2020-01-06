@@ -1,7 +1,12 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 
+import static com.codeborne.selenide.Selenide.$;
+
 public class BaseClass {
+
+    static  String loginn =  "tomsmith";
+    static  String password =  "SuperSecretPassword!";
 
     {
         Configuration.baseUrl = "https://the-internet.herokuapp.com";
