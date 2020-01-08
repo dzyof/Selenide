@@ -20,10 +20,14 @@ public class JQMenu {
 
     }
 
+
+
     public void downloadExcel  () throws FileNotFoundException {
         //$("#ui-id-3").shouldBe(Condition.visible).hover().find(By.id("ui-id-4")).hover().find(By.id("ui-id-7")).download();
         $("#ui-id-3").shouldBe(Condition.visible).hover();
         $("#ui-id-4").click();
         $("#ui-id-7 a").download();
+
+
     }
 }

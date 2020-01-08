@@ -7,7 +7,7 @@ import org.junit.Test;
 import widget.*;
 
 import java.io.FileNotFoundException;
-import java.util.stream.Stream;
+
 
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
@@ -108,6 +108,20 @@ public class TrainingTheInternet extends BaseClass{
 
         this.open("/jqueryui/menu");
         menu.downloadExcel();
+    }
+
+    @Test
+    public void createTestJSAlert(){
+        JSAlert jsalert = new JSAlert();
+
+        this.open("/javascript_alerts");
+
+    //    jsalert.open();
+
+       jsalert.confirm(true);
+      // jsalert.confirm(false);
+
+
     }
 
 }
