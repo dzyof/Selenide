@@ -13,8 +13,6 @@ public class JSAlert {
 
     ElementsCollection collection =   $$(".example ul li button");
 
-
-
     public void open() {
         collection.filterBy(Condition.matchText("JS Alert")).first().click();
         Selenide.confirm();
