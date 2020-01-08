@@ -116,10 +116,11 @@ public class TrainingTheInternet extends BaseClass{
 
         this.open("/javascript_alerts");
 
-    //    jsalert.open();
-
-       jsalert.confirm(true);
-      // jsalert.confirm(false);
+    //   jsalert.open();
+       // Можливий визов з двома параметрами
+    //   jsalert.confirm(true);
+     //  jsalert.confirm(false);
+       jsalert.prompt("123 - test");
 
 
     }

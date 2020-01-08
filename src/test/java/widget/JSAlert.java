@@ -1,7 +1,9 @@
 package widget;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 
 
 import static com.codeborne.selenide.Selenide.$;
@@ -9,14 +11,18 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class JSAlert {
 
+    ElementsCollection collection =   $$(".example ul li button");
+
+
+
     public void open() {
-        $$(".example ul li button").filterBy(Condition.matchText("JS Alert")).first().click();
+        collection.filterBy(Condition.matchText("JS Alert")).first().click();
         Selenide.confirm();
         $("#result").shouldHave(Condition.matchText("ssfuly clicked an alert"));
     }
 
     public void confirm(boolean action) {
-        $$(".example ul li button").filterBy(Condition.matchText("JS Confirm")).first().click();
+        collection.filterBy(Condition.matchText("JS Confirm")).first().click();
 
         if(action){
             Selenide.confirm();
@@ -28,6 +34,11 @@ public class JSAlert {
         }
         // TODO переробити на тернарний оператор
        // action? Selenide.confirm() : Selenide.dismiss();
-        Selenide.sleep(2000);
+    }
+
+    public void prompt( String string ) {
+        collection.filterBy(Condition.matchText("Click for JS Prompt")).first().click();
+        Selenide.prompt(string);
+        $("#result").shouldHave(Condition.matchText(string));
     }
 }
