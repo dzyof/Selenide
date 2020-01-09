@@ -2,9 +2,6 @@ package widget;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
-
-import static com.codeborne.selenide.CollectionCondition.empty;
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -15,7 +12,7 @@ public class Element {
         $(".added-manually").shouldBe(Condition.visible);
     }
 
-    public void remuveOneElement() {
+    public void addFiveElement() {
        for (int i = 5; i > 0; i--){
            this.addElement();
        }

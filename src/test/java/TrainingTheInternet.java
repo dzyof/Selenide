@@ -26,7 +26,7 @@ public class TrainingTheInternet extends BaseClass{
 
         this.open("/add_remove_elements/");
         element.addElement();
-        element.remuveOneElement();
+        element.addFiveElement();
         element.remuveAllElement();
     }
 
@@ -135,12 +135,12 @@ public class TrainingTheInternet extends BaseClass{
     }
 
     @Test
-    public  void  creatreTestEntryAd(){
+    public  void  createTestEntryAd(){
         EntryAd modal = new EntryAd();
 
         this.open("/entry_ad");
-     //   modal.mustBeVisible();
-        modal.mustBeHiden();
+        modal.mustBeVisible();
+     //   modal.mustBeHiden();
 
     }
 
