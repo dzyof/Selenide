@@ -74,6 +74,8 @@ public class TrainingTheInternet extends BaseClass{
     //@Test
     public  void  createTestsSlider(){
 
+        //тут покипроблеми
+
         Sliders slider = new Sliders();
         this.open("/horizontal_slider");
         slider.maxValue();
@@ -116,8 +118,7 @@ public class TrainingTheInternet extends BaseClass{
 
         this.open("/javascript_alerts");
 
-
-       // Можливий визов з двома параметрами
+       // Можливий виrkbr з двома параметрами
        jsalert.confirm(true);
        jsalert.confirm(false);
 
@@ -139,9 +140,8 @@ public class TrainingTheInternet extends BaseClass{
         EntryAd modal = new EntryAd();
 
         this.open("/entry_ad");
-        modal.mustBeVisible();
-     //   modal.mustBeHiden();
-
+        modal.firstLoad();
+        modal.clearCookies();
     }
 
 
