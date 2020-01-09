@@ -2,6 +2,7 @@ package widget;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.CollectionCondition.empty;
 import static com.codeborne.selenide.CollectionCondition.size;
@@ -25,6 +26,7 @@ public class Element {
 
     public void remuveAllElement() {
         int length =  $$("#elements .added-manually").size();
+
         for (int i=0; i < length; i++)
         {
             $(".added-manually").click();

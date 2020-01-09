@@ -134,4 +134,15 @@ public class TrainingTheInternet extends BaseClass{
 
     }
 
+    @Test
+    public  void  creatreTestEntryAd(){
+        EntryAd modal = new EntryAd();
+
+        this.open("/entry_ad");
+     //   modal.mustBeVisible();
+        modal.mustBeHiden();
+
+    }
+
+
 }
