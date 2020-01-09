@@ -140,9 +140,16 @@ public class TrainingTheInternet extends BaseClass{
         EntryAd modal = new EntryAd();
 
         this.open("/entry_ad");
-        modal.firstLoad();
+     //   modal.firstLoad();
         modal.clearCookies();
     }
 
+    //@Test
+   // public  void  createInfiniteScroll() {
+    //    this.open("/infinite_scroll");
+
+     //   InfiniteScroll infinitescroll = new InfiniteScroll();
+     //   infinitescroll.findByText("Sint voluptate");
+  //  }
 
 }
